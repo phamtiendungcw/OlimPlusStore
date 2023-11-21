@@ -14,4 +14,9 @@
     <Folder Include="Controllers\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\OPS.Infrastructure\OPS.Infrastructure.csproj" />
+    <ProjectReference Include="..\OPS.Persistence\OPS.Persistence.csproj" />
+  </ItemGroup>
+
 </Project>
