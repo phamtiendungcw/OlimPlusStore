@@ -16,8 +16,7 @@ namespace OPS.Application.Features.Discount.Queries.GetDiscountDetails
             _mapper = mapper;
         }
 
-        public async Task<DiscountDetailDto> Handle(GetDiscountDetailsQuery request,
-            CancellationToken cancellationToken)
+        public async Task<DiscountDetailDto> Handle(GetDiscountDetailsQuery request, CancellationToken cancellationToken)
         {
             var discount = await _discountRepository.GetByIdAsync(request.Id);
             var data = _mapper.Map<DiscountDetailDto>(discount);
