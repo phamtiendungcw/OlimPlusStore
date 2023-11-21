@@ -3,7 +3,7 @@ using OPS.Domain;
 
 namespace OPS.Application.Contracts.Persistence
 {
-    public interface IImageProductRepository : IGenericRepository<ImageProduct>
+    public interface IProductImageRepository : IGenericRepository<ProductImage>
     {
     }
 }

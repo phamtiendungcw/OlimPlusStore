@@ -1,22 +1,20 @@
 ﻿using OPS.Domain.Common;
-using System.ComponentModel.DataAnnotations.Schema;
 
 namespace OPS.Domain
 {
     public class Product : BaseEntity
     {
-        public string Name { get; set; }
-        public string Description { get; set; }
+        public string Name { get; set; } = string.Empty;
+        public string Description { get; set; } = string.Empty;
         public decimal Price { get; set; }
-        public double AverageRating { get; set; }
-        public string SKU { get; set; }
-
-        [ForeignKey("Brand")] public int BrandId { get; set; }
-        [ForeignKey("Category")] public int CategoryId { get; set; }
-        [ForeignKey("InventoryItem")] public int InventoryItemId { get; set; }
+        public string SKU { get; set; } = string.Empty;
+        public int BrandId { get; set; }
+        public int CategoryId { get; set; }
+        public int InventoryItemId { get; set; }
 
         public Brand Brand { get; set; }
         public Category Category { get; set; }
         public InventoryItem InventoryItem { get; set; }
+        public ICollection<ProductImage> ImageProducts { get; set; }
     }
 }

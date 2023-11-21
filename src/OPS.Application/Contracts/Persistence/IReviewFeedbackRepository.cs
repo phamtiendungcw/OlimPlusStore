@@ -3,7 +3,7 @@ using OPS.Domain;
 
 namespace OPS.Application.Contracts.Persistence
 {
-    public interface IReviewFeedbackRepository : IGenericRepository<ReviewFeedback>
+    public interface IReviewFeedbackRepository : IGenericRepository<ReviewFeedBack>
     {
     }
 }

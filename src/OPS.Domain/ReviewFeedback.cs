@@ -1,13 +1,12 @@
 ﻿using OPS.Domain.Common;
-using System.ComponentModel.DataAnnotations.Schema;
 
 namespace OPS.Domain
 {
-    public class ReviewFeedback : BaseEntity
+    public class ReviewFeedBack : BaseEntity
     {
-        public string Feedback { get; set; }
+        public int ReviewFeedBackId { get; set; }
+        public string Feedback { get; set; } = string.Empty;
 
-        [ForeignKey("Review")] public int ReviewId { get; set; }
-        public Review Review { get; set; }
+        public Review RelatedReview { get; set; }
     }
 }

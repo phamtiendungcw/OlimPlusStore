@@ -8,8 +8,15 @@
 
   <ItemGroup>
     <Folder Include="Configurations\" />
-    <Folder Include="DatabaseContext\" />
-    <Folder Include="Repositories\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="6.0.25" />
+    <PackageReference Include="Microsoft.Extensions.Options.ConfigurationExtensions" Version="6.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\OPS.Application\OPS.Application.csproj" />
   </ItemGroup>
 
 </Project>
