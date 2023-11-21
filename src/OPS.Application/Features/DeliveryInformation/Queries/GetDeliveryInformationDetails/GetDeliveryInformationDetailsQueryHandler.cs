@@ -5,9 +5,7 @@ using OPS.Application.DTO.Delivery;
 
 namespace OPS.Application.Features.DeliveryInformation.Queries.GetDeliveryInformationDetails
 {
-    public class
-        GetDeliveryInformationDetailsQueryHandler : IRequestHandler<GetDeliveryInformationDetailsQuery,
-            DeliveryInformationDetailDto>
+    public class GetDeliveryInformationDetailsQueryHandler : IRequestHandler<GetDeliveryInformationDetailsQuery, DeliveryInformationDetailDto>
     {
         private readonly IDeliveryInformationRepository _deliveryInformationRepository;
         private readonly IMapper _mapper;
@@ -19,8 +17,7 @@ namespace OPS.Application.Features.DeliveryInformation.Queries.GetDeliveryInform
             _mapper = mapper;
         }
 
-        public async Task<DeliveryInformationDetailDto> Handle(GetDeliveryInformationDetailsQuery request,
-            CancellationToken cancellationToken)
+        public async Task<DeliveryInformationDetailDto> Handle(GetDeliveryInformationDetailsQuery request, CancellationToken cancellationToken)
         {
             var deliveryInformation = await _deliveryInformationRepository.GetByIdAsync(request.Id);
             var data = _mapper.Map<DeliveryInformationDetailDto>(deliveryInformation);

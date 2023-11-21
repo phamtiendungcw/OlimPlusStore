@@ -8,7 +8,6 @@
 
   <ItemGroup>
     <Folder Include="Features\Image\Commands\" />
-    <Folder Include="Features\Image\Queries\" />
     <Folder Include="Features\Inventory\Commands\" />
     <Folder Include="Features\Inventory\Queries\" />
     <Folder Include="Features\Invoice\Commands\" />
